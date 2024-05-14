@@ -10,7 +10,9 @@ class Connection:
         self.username = username
         self.password = password
         self.api_key = api_key
+        self.base_url = f"{self.host}:{self.port}/"
 
+        
     def get_connection(self) -> requests.Session:
         session = requests.Session()
         payload = {
@@ -19,9 +21,10 @@ class Connection:
             "password": self.password,
             "grant_type": "password",
         }
+        
         try:
             response = session.post(
-                f"{self.host}:{self.port}/token",
+                f"{self.base_url}/token",
                 data=payload
             )
 
