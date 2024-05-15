@@ -1,11 +1,11 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='sage sdk',
+    name='sage-sdk',
     version='1.0',
     packages=find_packages(),
     install_requires=[],
-    author='Petalm Africa',
+    author='Nyasha Chizampeni',
     author_email='nyashac@petalmafrica.com',
     description='Description of your package',
     long_description=open('README.md').read(),
