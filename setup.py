@@ -6,7 +6,7 @@ setup(
     packages=find_packages(),
     install_requires=[],
     author='Nyasha Chizampeni',
-    author_email='nyashac@petalmafrica.com',
+    author_email='nchizampeni@gmail.com',
     description='Description of your package',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',

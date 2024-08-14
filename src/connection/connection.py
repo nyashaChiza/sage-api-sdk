@@ -27,6 +27,7 @@ class Connection:
                 f"{self.base_url}/token",
                 data=payload
             )
+          
 
             response.raise_for_status()
             access_token = json.loads(response.content)["access_token"]
@@ -48,3 +49,4 @@ class Connection:
                     "message": "Connection established successfully"}
         except ConnectionError as e:
             return {"status": False, "message": str(e)}
+
