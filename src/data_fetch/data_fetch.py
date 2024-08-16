@@ -11,7 +11,7 @@ class DataFetch:
     """Class responsible for fetching data from an endpoint."""
 
     def __init__(self, connection: Connection) -> None:
-
+    
         self.session = connection.get_connection()
         self.connection = connection
 
