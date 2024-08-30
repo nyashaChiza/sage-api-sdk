@@ -19,12 +19,9 @@ class DataFetch:
        
         try:
             url = f"{self.connection.base_url}/{endpoint}"
-            if parameters:
-                query_parameters = [
-                    {"QueryParameterString": str(key), "ParameterValue": str(value)}
-                    for key, value in parameters.items()
-                ]
-                parameters = {"QueryParameterList": query_parameters}
+            
+            if kwargs.get('parameters'):
+                parameters = {"QueryParameterList": kwargs.get('parameters')}
                 response = self.session.post(url, json=parameters)
             else:
                 response = self.session.post(url)
